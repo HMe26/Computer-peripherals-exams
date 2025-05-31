@@ -10,8 +10,14 @@ body {
   align-items: flex-start;
   min-height: 100vh;
   overflow-x: hidden; /* Prevent horizontal scroll from animations */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative; /* For absolute positioning of submit button */
 }
 #submit-quiz {
+  display: block;
   margin: auto;
   text-align: center;
   bottom: 20px;
