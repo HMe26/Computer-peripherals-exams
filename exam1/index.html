@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computer Peripherals Mid-Term Exam</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="exam-container">
+      <h1>Computer Peripherals Mid-Term Exam</h1>
+      <div class="header-info">
+        <p><strong>Department:</strong> Computer Science</p>
+        <p><strong>Academic Level:</strong> Two</p>
+        <p><strong>Course Code:</strong> CS214</p>
+        <p><strong>Course Title:</strong> Computer Peripherals</p>
+        <p><strong>Instructor:</strong> Dr. Sami Ali Mostafa</p>
+        <p><strong>Total Mark:</strong> 25</p>
+        <p><strong>Time Allowed:</strong> 45 minutes</p>
+        <p><strong>Exam Date:</strong> 10/4/2023</p>
+      </div>
+
+      <div class="timer-container">
+        Time Remaining: <span id="timer">45:00</span>
+      </div>
+
+      <div id="quiz-container"></div>
+
+      <button id="submit-quiz">Submit Exam</button>
+
+      <div id="result-container" class="hidden">
+        <h2>Exam Results</h2>
+        <p>Your Score: <span id="score"></span> / 25</p>
+        <div id="feedback"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
