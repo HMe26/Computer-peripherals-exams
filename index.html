@@ -1,185 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Computer Peripherals Examination System</title>
     <style>
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
         }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
         }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
 
-        @keyframes slideIn {
-            from { transform: translateX(-100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
         }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            color: #2c3e50;
-        }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: #2c3e50;
+      }
 
-        .container {
-            background-color: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            width: 100%;
-            max-width: 1000px;
-            animation: fadeIn 1s ease-out;
-        }
+      .container {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        width: 100%;
+        max-width: 1000px;
+        animation: fadeIn 1s ease-out;
+      }
 
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 40px;
-            font-size: 2.5em;
-            font-weight: 700;
-            animation: slideIn 1s ease-out;
-        }
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 40px;
+        font-size: 2.5em;
+        font-weight: 700;
+        animation: slideIn 1s ease-out;
+      }
 
-        .exam-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
+      .exam-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+      }
 
-        .exam-card {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            animation: fadeIn 0.5s ease-out;
-        }
+      .exam-card {
+        background: white;
+        border-radius: 12px;
+        padding: 25px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        animation: fadeIn 0.5s ease-out;
+      }
 
-        .exam-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
+      .exam-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
 
-        .exam-card h2 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
+      .exam-card h2 {
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-size: 1.5em;
+      }
 
-        .exam-card p {
-            color: #7f8c8d;
-            margin-bottom: 20px;
-            font-size: 1.1em;
-        }
+      .exam-card p {
+        color: #7f8c8d;
+        margin-bottom: 20px;
+        font-size: 1.1em;
+      }
 
-        .start-button {
-            background: linear-gradient(135deg, #28a745 0%, #218838 100%);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            padding: 12px 25px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
+      .start-button {
+        background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 25px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
 
-        .start-button:hover {
-            background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
-            transform: scale(1.05);
-            animation: pulse 1s infinite;
-        }
+      .start-button:hover {
+        background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
+        transform: scale(1.05);
+        animation: pulse 1s infinite;
+      }
 
-        .exam-info {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            padding: 10px;
-            background: rgba(44, 62, 80, 0.05);
-            border-radius: 8px;
-        }
+      .exam-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        padding: 10px;
+        background: rgba(44, 62, 80, 0.05);
+        border-radius: 8px;
+      }
 
-        .info-item {
-            text-align: center;
-            flex: 1;
-        }
+      .info-item {
+        text-align: center;
+        flex: 1;
+      }
 
-        .info-item span {
-            font-weight: bold;
-            color: #2c3e50;
-        }
+      .info-item span {
+        font-weight: bold;
+        color: #2c3e50;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>Computer Peripherals Examination System</h1>
-        <div class="exam-grid">
-            <div class="exam-card">
-                <h2>Midterm Examination</h2>
-                <div class="exam-info">
-                    <div class="info-item">
-                        <p>Duration: <span>45 minutes</span></p>
-                    </div>
-                    <div class="info-item">
-                        <p>Total Score: <span>25 points</span></p>
-                    </div>
-                </div>
-                <a href="exam1/index.html" class="start-button">Start Exam</a>
+      <h1>Computer Peripherals Examination System</h1>
+      <div class="exam-grid">
+        <div class="exam-card">
+          <h2>Midterm Examination</h2>
+          <div class="exam-info">
+            <div class="info-item">
+              <p>Duration: <span>45 minutes</span></p>
             </div>
-            <div class="exam-card">
-                <h2>Make-up Midterm</h2>
-                <div class="exam-info">
-                    <div class="info-item">
-                        <p>Duration: <span>60 minutes</span></p>
-                    </div>
-                    <div class="info-item">
-                        <p>Total Score: <span>25 points</span></p>
-                    </div>
-                </div>
-                <a href="exam2/index.html" class="start-button">Start Exam</a>
+            <div class="info-item">
+              <p>Total Score: <span>25 points</span></p>
             </div>
-            <div class="exam-card">
-                <h2>Final Examination</h2>
-                <div class="exam-info">
-                    <div class="info-item">
-                        <p>Duration: <span>120 minutes</span></p>
-                    </div>
-                    <div class="info-item">
-                        <p>Total Score: <span>50 points</span></p>
-                    </div>
-                </div>
-                <a href="exam3/index.html" class="start-button">Start Exam</a>
-            </div>
-            <div class="exam-card">
-                <h2>Comprehensive Exam</h2>
-                <div class="exam-info">
-                    <div class="info-item">
-                        <p>Duration: <span>90 minutes</span></p>
-                    </div>
-                    <div class="info-item">
-                        <p>Total Score: <span>32 points</span></p>
-                    </div>
-                </div>
-                <a href="exam4/index.html" class="start-button">Start Exam</a>
-            </div>
+          </div>
+          <a href="exam1/index.html" class="start-button">Start Exam</a>
         </div>
+        <div class="exam-card">
+          <h2>Make-up Midterm</h2>
+          <div class="exam-info">
+            <div class="info-item">
+              <p>Duration: <span>60 minutes</span></p>
+            </div>
+            <div class="info-item">
+              <p>Total Score: <span>25 points</span></p>
+            </div>
+          </div>
+          <a href="exam2/index.html" class="start-button">Start Exam</a>
+        </div>
+        <div class="exam-card">
+          <h2>Final Examination</h2>
+          <div class="exam-info">
+            <div class="info-item">
+              <p>Duration: <span>120 minutes</span></p>
+            </div>
+            <div class="info-item">
+              <p>Total Score: <span>50 points</span></p>
+            </div>
+          </div>
+          <a href="exam3/index.html" class="start-button">Start Exam</a>
+        </div>
+        <div class="exam-card">
+          <h2>Comprehensive Exam</h2>
+          <div class="exam-info">
+            <div class="info-item">
+              <p>Duration: <span>90 minutes</span></p>
+            </div>
+            <div class="info-item">
+              <p>Total Score: <span>32 points</span></p>
+            </div>
+          </div>
+          <a href="exam4/index.html" class="start-button">Start Exam</a>
+        </div>
+      </div>
     </div>
-</body>
+    <script>
+      document.querySelectorAll(".start-button").forEach((button) => {
+        button.addEventListener("click", () => {
+          alert("Exam started! Good luck!");
+        });
+      });
+    </script>
+  </body>
 </html>
